@@ -45,12 +45,12 @@ h2 {
 }
 
 .profile {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #4caf50;
-    margin-bottom: 15px;
+    width: 50%;          
+    max-width: 450px;    
+    height: auto;        
+    display: block;
+    margin: 20px auto;   
+    border-radius: 15px; 
 }
 
 img {
@@ -111,33 +111,30 @@ footer {
 }
 
 @media (max-width: 768px) {
-
     h1 {
         font-size: 32px;
     }
-
     .intro,
     .skills,
     .gallery,
     .contact {
         flex: 1 1 100%;
     }
+    .profile {
+        width: 90%;
+    }
 }
 
 @media (max-width: 480px) {
-
     body {
         padding: 15px;
     }
-
     h1 {
         font-size: 28px;
     }
-
     h2 {
         font-size: 22px;
     }
-
     button {
         width: 100%;
     }
