@@ -9,7 +9,7 @@ const images = [
     },
     {
         src: "images/20260202_123213.jpg",
-        alt: "Temple"
+        alt: "Templee"
     },
     {
         src: "images/IMG-20260403-WA0092.jpg",
