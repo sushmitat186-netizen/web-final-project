@@ -1,144 +1,185 @@
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-    margin: 0;
-    padding: 20px;
-    text-align: center;
-    color: #1b5e20;
-    transition: 0.4s;
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-h1 {
-    font-size: 40px;
-    margin-bottom: 30px;
+body{
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:linear-gradient(135deg,#e8f5e9,#c8e6c9);
+    color:#1b5e20;
+    padding:20px;
+    text-align:center;
+    transition:0.4s;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+/* Dark Mode Button */
+#darkModeBtn{
+    position:fixed;
+    top:15px;
+    right:15px;
+    z-index:1000;
+}
+
+h1{
+    font-size:40px;
+    margin:30px 0;
+}
+
+/* Layout */
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
 }
 
 .intro,
 .skills,
 .gallery,
-.contact {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    flex: 1 1 350px;
-    max-width: 550px;
-    box-shadow: 0 5px 15px rgba(0, 128, 0, 0.15);
-    transition: transform 0.3s;
+.contact{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    width:100%;
+    max-width:500px;
+    box-shadow:0 5px 15px rgba(0,128,0,0.15);
+    transition:transform 0.3s;
 }
 
 .intro:hover,
 .skills:hover,
 .gallery:hover,
-.contact:hover {
-    transform: translateY(-5px);
+.contact:hover{
+    transform:translateY(-5px);
 }
 
-h2 {
-    color: #2e7d32;
+h2{
+    margin-bottom:15px;
+    color:#2e7d32;
 }
 
-.profile {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #4caf50;
-    margin-bottom: 15px;
+/* Profile Image */
+.profile{
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #4caf50;
+    margin:15px auto;
+    display:block;
 }
 
-img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 15px;
-    border: 4px solid #4caf50;
+/* Gallery Image */
+.gallery-img{
+    width:100%;
+    max-width:100%;
+    height:auto;
+    border-radius:15px;
+    border:4px solid #4caf50;
+    display:block;
+    margin:15px auto;
 }
 
-button {
-    background: #4caf50;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
+/* Skills */
+ul{
+    list-style:none;
 }
 
-button:hover {
-    background: #2e7d32;
+li{
+    margin:10px 0;
+    font-size:18px;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+/* Buttons */
+button{
+    background:#4caf50;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    margin-top:10px;
 }
 
-li {
-    margin: 10px 0;
-    font-size: 18px;
+button:hover{
+    background:#2e7d32;
 }
 
-footer {
-    margin-top: 30px;
-    font-weight: bold;
+/* Contact */
+.contact p{
+    margin:10px 0;
 }
 
-.dark-mode {
-    background: linear-gradient(135deg, #0d1f12, #1b4332);
-    color: white;
+/* Footer */
+footer{
+    margin-top:30px;
+    font-weight:bold;
+}
+
+/* Dark Mode */
+.dark-mode{
+    background:linear-gradient(135deg,#0d1f12,#1b4332);
+    color:white;
 }
 
 .dark-mode .intro,
 .dark-mode .skills,
 .dark-mode .gallery,
-.dark-mode .contact {
-    background: #1e2f23;
-    color: white;
+.dark-mode .contact{
+    background:#1e2f23;
+    color:white;
 }
 
-.dark-mode button {
-    background: #66bb6a;
+.dark-mode h2{
+    color:#81c784;
 }
 
-.dark-mode button:hover {
-    background: #4caf50;
+.dark-mode button{
+    background:#66bb6a;
 }
 
-@media (max-width: 768px) {
+.dark-mode button:hover{
+    background:#4caf50;
+}
 
-    h1 {
-        font-size: 32px;
+/* Tablet */
+@media (max-width:768px){
+
+    h1{
+        font-size:32px;
     }
 
-    .intro,
-    .skills,
-    .gallery,
-    .contact {
-        flex: 1 1 100%;
+    .profile{
+        width:170px;
+        height:170px;
     }
 }
 
-@media (max-width: 480px) {
+/* Mobile */
+@media (max-width:480px){
 
-    body {
-        padding: 15px;
+    body{
+        padding:15px;
     }
 
-    h1 {
-        font-size: 28px;
+    h1{
+        font-size:26px;
+        margin-top:60px;
     }
 
-    h2 {
-        font-size: 22px;
+    h2{
+        font-size:22px;
     }
 
-    button {
-        width: 100%;
+    .profile{
+        width:150px;
+        height:150px;
     }
-}
+
+    button{
+        width:100%;
+    }
+}    
